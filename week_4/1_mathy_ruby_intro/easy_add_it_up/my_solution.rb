@@ -31,6 +31,22 @@ Then we need to output the final string as a sentence
 
 # 2. Initial Solution
 
+def total(Array)
+	my_sum = 0
+	Array.length.times do
+		my_sum+=1
+	end
+	return my_sum
+end
+
+def sentence_maker(Array2)
+	my_sentence = 0
+	Array2.length.times do
+		my_sentence+=1
+	end
+	return my_sentence
+end
+
 # 3. Refactored Solution
 
 
