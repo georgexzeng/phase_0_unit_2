@@ -8,7 +8,7 @@ describe 'get_grade' do
   let(:arrayF) { [50,40,0,99,9]}
   
   it 'is defined as a method' do
-    defined?(get_grade).should eq 'method'
+    defined?(essay_writer).should eq 'method'
   end
   it 'returns "A" when the average is >= 90' do
     get_grade(arrayA).should eq "A"
