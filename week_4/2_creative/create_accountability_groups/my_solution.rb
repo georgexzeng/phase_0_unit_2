@@ -59,11 +59,6 @@ def accountability_method(student_list)
 	student_list.shuffle.each_slice(4).to_a
 end
 
-puts (accountability_method student_list).inspect
-
-
-# This solution works - but it's just listing the students in order, is not creating
-# a random list, and the list will be the same every time
 
 # 4. Refactored Solution
 
@@ -74,30 +69,38 @@ puts (accountability_method student_list).inspect
 # require_relative "my_solution"
 
 # describe 'accountability_method' do
-# 	let (:arrayA) {[]}
-# 	let (:arrayB) {["First1 Last1", "First2 Last2"]}
-# 	let (:arrayC) {["First1 Last1", "First2 Last2", "First3 Last3", "First4 Last4", "First5 Last5", "First6 Last6", "First7 Last7"]}
+# 	let (:array_1) {[]}
+# 	let (:array_2) {["First1 Last1", "First2 Last2"]}
+# 	let (:array_3) {["First1 Last1", "First2 Last2", "First3 Last3", "First4 Last4", "First5 Last5", "First6 Last6", "First7 Last7"]}
 
 # 	it "is defined as a method" do
 # 		defined?(accountability_method).should eq "method"
 # 	end
 
 # 	it "requires a single argument" do
-# 		method(:total).arity.should eq 1
+# 		method(:accountability_method).arity.should eq 1
 # 	end
 
-# 	it "returns nothing for an empty array"
-# 		accountability_method(arrayA).should eq []
+# 	it "returns nothing for an empty array" do
+# 		accountability_method(array_1).length.should eq 0
 # 	end
 
-# 	it "returns one accountability group when less than 4 names"
-# 		accountability_method(arrayA).should eq [["First1 Last1", "First2 Last2"]]
+# 	it "returns one accountability group when less than 4 names" do
+# 		accountability_method(array_2).length.should eq 1
 # 	end
 
-# 	it "returns multiple accountability groups, including some that may not have 4 names"
-# 		accountability_method(arrayA).should eq [["First 1 Last1", "First2 Last2", "First3 Last3", "First4 Last4"], ["First5 Last5", "First6 Last6", "First7 Last7"]]]
+# 	it "returns multiple accountability groups, including some that may not have 4 names" do
+# 		accountability_method(array_3).length.should eq 2
 # 	end
+# end
 
 # 5. Reflection 
 
+# Wow this test took me a while to finish.  The key gist of it is that I'm still not super
+# comfrotable working with rspec; in addition, I needed some time working out the
+# randomization and array-ization of the list of people in my class. 
 
+# Going forward - think I'll use a combination of tutorials and class notes to
+# get through challenges one by one, instead of jumping around, which has been my
+# modus operandi to date.  Focused time working through each one of these challenges
+# seems to be the best bet to finish them in a timely manner.

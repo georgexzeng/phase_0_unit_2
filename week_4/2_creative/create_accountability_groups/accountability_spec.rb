@@ -13,15 +13,15 @@ describe 'accountability_method' do
 		method(:accountability_method).arity.should eq 1
 	end
 
-	it "returns nothing for an empty array"
+	it "returns nothing for an empty array" do
 		accountability_method(array_1).length.should eq 0
 	end
 
-	it "returns one accountability group when less than 4 names"
+	it "returns one accountability group when less than 4 names" do
 		accountability_method(array_2).length.should eq 1
 	end
 
-	it "returns multiple accountability groups, including some that may not have 4 names"
+	it "returns multiple accountability groups, including some that may not have 4 names" do
 		accountability_method(array_3).length.should eq 2
 	end
 end
