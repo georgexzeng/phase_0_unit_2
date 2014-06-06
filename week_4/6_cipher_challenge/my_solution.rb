@@ -42,6 +42,8 @@ def north_korean_cipher(coded_message)
             "b" => "x",
             "c" => "y",
             "d" => "z"}
+  def new_cipher(input)
+    
             
   input.each do |x| # What is #each doing here? 
     #Each is basically running through each 
