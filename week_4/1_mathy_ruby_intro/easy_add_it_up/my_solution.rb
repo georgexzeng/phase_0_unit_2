@@ -50,6 +50,7 @@
 # 	return my_sentence
 # end
 
+
 # 3. Refactored Solution
 
 def total(array)
