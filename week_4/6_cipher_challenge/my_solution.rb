@@ -115,7 +115,7 @@ def north_korean_cipher(coded_message)
         decoded_sentence << x
       end
   end
-  decoded_sentence = decoded_sentence.join("")
+  decoded_sentence = decoded_sentence.join
  
   if decoded_sentence.match(/\d+/)
     decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 }
