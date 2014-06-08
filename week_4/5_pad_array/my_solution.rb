@@ -28,23 +28,62 @@
 
 # 2. Initial Solution
 
+# class Array
+#   def pad(pad_num, pad_value)
+#     pad_decider = pad_num - self.length
+#     if pad_decider > 0 then 
+#       pad_decider.times do pad_value
+#         self.push(pad_value)
+#       end
+#     else 
+#       self
+#     end
+#     self
+#   end
+# end
+
+# 3. Refactored Solution
+
 class Array
-  def pad(pad_num, pad_value)
+  def pad!(pad_num, pad_value=nil)
     pad_decider = pad_num - self.length
-    if pad_decider > 0 then 
-      pad_decider.times do pad_value
+    if pad_decider > 0
+      if pad_value != nil
+        pad_decider.times do
         self.push(pad_value)
+        end
+      else 
+        pad_decider.times do
+        self.push(nil)
+        end
       end
     else 
       self
     end
     self
   end
+  def pad(pad_num, pad_value=nil)
+    array_clone=self.clone
+    pad_decider = pad_num - self.length
+    if pad_decider > 0
+      if pad_value != nil
+        pad_decider.times do
+        array_clone.push(pad_value)
+        end
+      else 
+        pad_decider.times do
+        array_clone.push(nil)
+        end
+      end
+    else 
+      array_clone
+    end
+    array_clone
+  end
 end
 
-
-# 3. Refactored Solution
-
-
+my_array = [1,2,3]*10
+puts my_array.pad(10).inspect
 
 # 4. Reflection 
+
