@@ -35,17 +35,27 @@ end
 
 # Person 3
 def my_array_sorting_method(source)
-  # Your code here!
+	puts i_want_pets.partition{|x| x.is_a? Fixnum}.map(&:sort).flatten.inspect
+	puts i_want_pets.inspect
 end
 
 def my_hash_sorting_method(source)
-  # Your code here!
+	puts my_family_pets_ages.sort {|a, b| a[1]<=>b[1]}.inspect
+	puts my_family_pets_ages.inspect
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# For the sorting by numbers and then letters:
+# 1. #partition by a condition (in this case whether a Fixnum or not into two arrays)
+# 2. #is_a to pose the condition of whether each character is a Fixnum or not
+# 3. #map to run each element in the different arrays to sort
+# 4. #sort to sort the numbers and letters
+# 5. #flatten to combine the two arrays that have been sorted
+# 6. #inspect to list the array out as an array instead of a list
+
+# For the sorting by numbers and then letters:
+# 1. #sort to sort the array by the values of the hash instead of by the keys
+# 2. #inspect to list the array out as an array instead of a list
 
 
 # Person 4
