@@ -25,7 +25,6 @@
 # Next, we find the average of the grades
 # +next we divide by the number of grades that are there in order to find the average
 
-<<<<<<< HEAD
 # Next, we find what grade letter corresponds to those aveages
 # +lastly, we can use an if / elsif / else condition to specify which grades a student's
 # 	average grade corresponds to
