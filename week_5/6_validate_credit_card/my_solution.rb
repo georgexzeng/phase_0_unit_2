@@ -5,7 +5,7 @@
 
 # 2. Pseudocode
 
-# Input: 14 integers
+# Input: 16 integers
 # Output: boolean true or false
 # Steps:
 
@@ -24,8 +24,8 @@ Steps
 class CreditCard
 	def initialize(num)
 		@num = num
-		unless num.to_s.length == 14 then
-			raise ArgumentError.new('Please insert 14 integers')
+		unless num.to_s.length == 16 then
+			raise ArgumentError.new('Please insert 16 integers')
 		end
 	end
 
@@ -56,10 +56,10 @@ class CreditCard
 	end
 end
 
-card = CreditCard.new(12345123451234)
-p card.double_method
-p card.sum_method
-p card.check_card
+card = CreditCard.new(1234512345123451)
+card.double_method
+card.sum_method
+p card.check_card == false
 
 # Don't forget to check on intialization for a card length
 # of exactly 16 digits
@@ -69,14 +69,23 @@ p card.check_card
 
 
 
-
-
-
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-# false_card=CreditCard.new(12345123451235)
-# false_card.check_card==false
-# true_card = CreditCard.new(4408041234567893)
-# true_card.check_card==true
+false_card=CreditCard.new(1234512345123522)
+false_card.double_method
+false_card.sum_method
+p false_card.check_card == false
+true_card = CreditCard.new(4408041234567893)
+true_card.double_method
+true_card.sum_method
+p true_card.check_card==true
 
 # 5. Reflection 
+
+<<-Reflection
+Ended up coming up with a way of making this solution work - but probably not the
+most efficient implementation of this solution.  Should think of refactoring
+
+Reflection
+
+
