@@ -1,13 +1,16 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Irene Yu.
 
 # EXPLANATION OF require_relative
-#
-#
+#Require relative is requiring state data, which is saved in the same directory
+#as the original_code.rb
+
 require_relative 'state_data'
 
 class VirusPredictor
+
+#initialize just defines the data fields that VirusPredictor starts with
 
   def initialize(state_of_origin, population_density, population, region, regional_spread)
     @state = state_of_origin
@@ -17,12 +20,17 @@ class VirusPredictor
     @next_region = regional_spread
   end
 
+  #virus_effects takes instance variables and returns them as a reported sentence 
+
   def virus_effects  #HINT: What is the SCOPE of instance variables?
     disease_report(@population_density, @population, @state) #come back to this
   end
 
   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
 
+  #disease_report in this case is specifying different number_of_deaths and
+  #speed of transfer depending on population_density and population
+  
   def disease_report(population_density, population, state)
     speed = 0.0
   

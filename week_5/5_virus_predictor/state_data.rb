@@ -1,5 +1,11 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census 
+<<-Analyze
+This state data is basically pulling in pieces of data by state
+
+One hash is State Name => an array of different has values
+Second hash is State Value Name: State Value
+Analyze
 
 
 STATE_DATA = {  "Alabama" => {population_density: 94.65, population: 4822023, region: 5, regional_spread: 3},
