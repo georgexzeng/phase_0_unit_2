@@ -2,7 +2,7 @@
 
 # I worked on this challenge with: 
 
-Joseph White
+# Joseph White
 
 # Our Refactored Solution
 
@@ -49,5 +49,12 @@ p bakery_num(41, "cake") == "You need to make 5 pie(s), 0 cake(s), and 1 cookie(
 
 #  Reflection 
 
+<<-Reflection
+Interesting to work on this with Joseph; we ran circles around whether the
+best way to do this would be by rewriting the code or refactoring it
+
+In the end, we decided that rewriting the code may be defeating the purpose of
+the exercise and refactored it instead
+Reflection
 
 
