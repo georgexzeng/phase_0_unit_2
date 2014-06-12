@@ -48,6 +48,8 @@ class CreditCard
 	end
 
 	def check_card
+		self.double_method
+		self.sum_method
 		if @sum%10==0
 			true
 		else
@@ -57,8 +59,6 @@ class CreditCard
 end
 
 card = CreditCard.new(1234512345123451)
-card.double_method
-card.sum_method
 p card.check_card == false
 
 # Don't forget to check on intialization for a card length
@@ -72,12 +72,8 @@ p card.check_card == false
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 false_card=CreditCard.new(1234512345123522)
-false_card.double_method
-false_card.sum_method
 p false_card.check_card == false
 true_card = CreditCard.new(4408041234567893)
-true_card.double_method
-true_card.sum_method
 p true_card.check_card==true
 
 # 5. Reflection 
