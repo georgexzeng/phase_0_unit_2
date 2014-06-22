@@ -40,17 +40,31 @@ Pseudocode
 # p true_card.check_card==true
 
 
-
 # 4. Convert your driver test code from that challenge into Assert Statements
 # require_relative 'my_solution_cc'
 
-def assert
-	raise "Assertion has failed!" unless yield
+require_relative 'my_solution_cc'
+
+def assert actual, expected, message
+	display message
+	puts actual == expected || display_error(actual, expected)
 end
 
-my_card_number = 4408041234567893
-assert {my_card_number == 4408041234567893}
-assert {my_card_number == 1234512345123522}
+def display message
+	puts "*" * 50
+	puts message
+	puts "*" * 50
+end
+
+def display_error actual, expected
+	"ERROR!  Expected #{expected} but got #{actual} instead."
+end
+
+false_card=CreditCard.new(1234512345123522).check_card
+true_card = CreditCard.new(4408041234567893).check_card
+
+assert false_card, false, "false cards check out as false"
+assert true_card, true, "true cards check out as true"
 
 # assert {my_card_number.check_card}
 
